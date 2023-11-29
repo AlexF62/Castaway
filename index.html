@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- обсолютный путь не вариант тут указывать, будет работать только у тебя, тк это только в твоем окружении такой путь к стилям, изза этого на github pages стилей нет (./styles.css), также в scss файле лучше стили разбивать по разным файлам исходя из их лексического окружения, к примеру для хэдера будет отдельный файл и так далее, потом эти файлы ипортятся в один файл и потом прогоняется в css-->
     <link rel="stylesheet" href="Castaway/styles.css">
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700;9..40,800&display=swap"
@@ -12,6 +13,7 @@
 </head>
 
 <body>
+    <!-- не понимаю для чего оборачивать весь лендинг в этот врапер, тк он ни на что не влияет, лучше его убрать и сразу в хедере и мейне писать классы wrapper или задавай стили для контейнера разным секциям -->
     <div class="wrapper">
 
         <header class="header">
@@ -28,6 +30,7 @@
                             <li><a href="#contact" class="link">Contact</a></li>
                         </ul>
                     </nav>
+                    <!-- бургер не работает -->
                     <button class="burger" data-burger aria-label="Open menu" aria-expanded="false">
                         <span class="burger__burger-line"></span>
                     </button>
@@ -52,6 +55,7 @@
                             <div class="home-soc">
                                 <div class="home-soc_soc-title">Listen on</div>
                                 <div class="soc-icon">
+                                    <!-- названия картинок вообще не отражают того что на них изображено; альты не сокращай -->
                                     <a href="#"><img src="./images/top1.svg" alt="soc-icon"></a>
                                     <a href="#"><img src="./images/top2.svg" alt="soc-icon"></a>
                                     <a href="#"><img src="./images/top3.svg" alt="soc-icon"></a>
@@ -134,9 +138,11 @@
                     </div>
                 </div>
             </section>
-
+                <div class="container">
+            <!-- классы не по БЭМ (выше тоже), у контейнера к примеру должен быть класс about-container -->
             <section id="about" class="about">
                 <div class="container">
+                    <!-- не пойму зачем эта лишняя обертка -->
                     <div class="about-body">
 
                         <div class="block-about">
@@ -170,7 +176,7 @@
                         </div>
 
 
-
+ <!-- на счет свгшек в псевдоэлементах, у них путь не верный к нужным файлам, а после исправления посмотри что с ними происходит -->
 
                     </div>
                 </div>
